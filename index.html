@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>SpeedWay - خدمات الإنترنت السعودية</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: #0d1b2a url('image/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0,74,173,0.85);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    .intro {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.9);
+      margin-top: -10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .intro p {
+      font-size: 18px;
+    }
+    .companies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 10px;
+    }
+    .company-card {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 160px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .company-card:hover {
+      transform: scale(1.05);
+    }
+    .company-card img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .company-card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #004aad;
+    }
+    .contact {
+      max-width: 500px;
+      margin: 30px auto;
+      background: rgba(255,255,255,0.95);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .contact h2 {
+      text-align: center;
+      color: #004aad;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    form input, form select, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    form button {
+      background: #004aad;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #00347a;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(255,255,255,0.9);
+      font-size: 14px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25d366;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    @media (max-width:600px) {
+      .companies {
+        flex-direction: column;
+        align-items: center;
+      }
+      .company-card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SpeedWay - خدمات الإنترنت السعودية</h1>
+</header>
+
+<div class="intro">
+  <p>نوفر لك أفضل باقات الإنترنت من أكبر مزودي الخدمة في المملكة: STC، MOBILY، ZAIN، SALAM، GO والمزيد.</p>
+</div>
+
+<section class="companies">
+  <div class="company-card">
+    <img src="image/stc.png" alt="STC Logo">
+    <h3>STC</h3>
+  </div>
+  <div class="company-card">
+    <img src="image/mobily.png" alt="Mobily Logo">
+    <h3>MOBILY</h3>
+  </div>
+  <div class="company-card">
+    <img src="image/zain.webp" alt="Zain Logo">
+    <h3>ZAIN</h3>
+  </div>
+  <div class="company-card">
+    <img src="image/salam.png" alt="Salam Logo">
+    <h3>SALAM</h3>
+  </div>
+  <div class="company-card">
+    <img src="image/go.jpg" alt="GO Logo">
+    <h3>GO</h3>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>طلب خدمة الإنترنت</h2>
+  <form id="orderForm">
+    <input type="text" id="name" placeholder="الاسم" required>
+    <input type="tel" id="phone" placeholder="رقم الجوال" required>
+    <select id="provider" required>
+      <option value="">اختر مزود الخدمة</option>
+      <option>STC</option>
+      <option>موبايلي</option>
+      <option>زين</option>
+      <option>سلام</option>
+      <option>GO</option>
+    </select>
+    <select id="serviceType" required>
+      <option value="">اختر نوع الخدمة</option>
+      <option>تأسيس خدمة ألياف بصرية والـ 5G المتنقل</option>
+      <option>صيانة خدمات الإنترنت والألياف</option>
+      <option>نقل خدمة الألياف البصرية</option>
+      <option>تركيب مقويات الشبكات</option>
+      <option>حلول جميع مشاكل الإنترنت</option>
+      <option>أخرى</option>
+    </select>
+    <textarea id="details" rows="4" placeholder="اكتب تفاصيل طلبك"></textarea>
+    <button type="submit">إرسال الطلب عبر واتساب</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 SpeedWay - جميع الحقوق محفوظة
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/966549251108" target="_blank">
+  تواصل واتساب
+</a>
+
+<!-- ✅ JavaScript بعد التصحيح -->
+<script>
+  document.getElementById("orderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    var name = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var provider = document.getElementById("provider").value;
+    var serviceType = document.getElementById("serviceType").value;
+    var details = document.getElementById("details").value.trim();
+
+    var message = `طلب خدمة إنترنت:
+الاسم: ${name}
+رقم الجوال: ${phone}
+مزود الخدمة: ${provider}
+نوع الخدمة: ${serviceType}
+تفاصيل: ${details}`;
+
+    var whatsappNumber = "966549251108";
+    var url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(url, "_blank");
+  });
+</script>
+
+</body>
+</html>
